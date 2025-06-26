@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasha Morales | Desarrollo Web</title>
+
+  <!-- Fuente dark digital -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Share Tech Mono', monospace;
+      background: url('https://images.unsplash.com/photo-1496309732348-3627f3f040ee?auto=format&fit=crop&w=1740&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 0, 30, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #d8b4ff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #d8b4ff88;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #a66cff;
+      margin-bottom: 40px;
+      text-shadow: 0 0 6px #a66cff88;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 15px 50px;
+      font-size: 1.2em;
+      color: white;
+      background: #5e2b82;
+      border: 2px solid #c27cff;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px #00000088;
+    }
+
+    .btn:hover {
+      background: #c27cff;
+      color: #1a001a;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #c27cff;
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h1>Sasha Morales</h1>
+    <h2>Desarrollo de Páginas Web</h2>
+
+    <div class="btn-container">
+      <a href="chatbot/index.html" class="btn">Chat Bot</a>
+      <a href="animacion/index.html" class="btn">Animación</a>
+      <a href="juegos/index.html" class="btn">Juegos</a>
+      <a href="proyecto/index.html" class="btn">Proyecto</a>
+    </div>
+  </div>
+</body>
+</html>
 
