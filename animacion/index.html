@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio | Mundo Marino</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/aa13/live/fbeebc60-905d-11ef-89ae-5575c76d98e6.jpg.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .hero {
+      height: 100vh;
+      backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: #00bcd4;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background 0.3s ease, transform 0.3s ease;
+      margin: 10px;
+    }
+
+    .btn:hover {
+      background: #0097a7;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Bienvenido al Mundo Marino</h1>
+    <p>Explora las criaturas más asombrosas del océano</p>
+    <a href="especies.html" class="btn">Ver Especies</a>
+    <a href="curiosidades.html" class="btn">Curiosidades</a>
+  </div>
+</body>
+</html>

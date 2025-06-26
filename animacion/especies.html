@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Especies Marinas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 40px 0 20px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+      background: #0097a7;
+    }
+
+    .tab-content {
+      display: none;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .tab-content h3 {
+      margin-top: 0;
+      font-size: 1.8em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script>
+    function showTab(id, btn) {
+      const allTabs = document.querySelectorAll('.tab-content');
+      const allButtons = document.querySelectorAll('.tab-button');
+
+      allTabs.forEach(tab => tab.style.display = 'none');
+      allButtons.forEach(b => b.classList.remove('active'));
+
+      document.getElementById(id).style.display = 'block';
+      btn.classList.add('active');
+    }
+
+    window.onload = () => {
+      const firstButton = document.querySelector('.tab-button');
+      if (firstButton) firstButton.click();
+    };
+  </script>
+</head>
+<body>
+  <h1 class="titulo">Especies Marinas</h1>
+
+  <div class="tabs">
+    <button class="tab-button" onclick="showTab('delfin', this)">Delfín</button>
+    <button class="tab-button" onclick="showTab('tiburon', this)">Tiburón</button>
+    <button class="tab-button" onclick="showTab('pulpo', this)">Pulpo</button>
+    <button class="tab-button" onclick="showTab('medusa', this)">Medusa</button>
+    <button class="tab-button" onclick="showTab('ballena', this)">Ballena Azul</button>
+  </div>
+
+  
+  <div class="tab-content" id="delfin">
+    <img src="https://www.muyinteresante.com/wp-content/uploads/sites/5/2023/05/dolphin-7253461_1280-1.jpg" alt="Delfín">
+    <h3>Delfín</h3>
+    <p><strong>Hábitat:</strong> Océanos cálidos y templados, también ríos como el Amazonas.</p>
+    <p><strong>Alimentación:</strong> Peces pequeños, calamares y crustáceos.</p>
+    <p><strong>Técnicas de caza:</strong> Caza en grupo, rodean bancos de peces, usan ecolocalización.</p>
+    <p><strong>Dato curioso:</strong> Tienen nombres individuales mediante silbidos y juegan por diversión.</p>
+  </div>
+
+  
+  <div class="tab-content" id="tiburon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg" alt="Tiburón">
+    <h3>Tiburón blanco</h3>
+    <p><strong>Hábitat:</strong> Aguas templadas, costas donde hay focas.</p>
+    <p><strong>Alimentación:</strong> Focas, peces grandes, tortugas.</p>
+    <p><strong>Técnicas de caza:</strong> Ataque sorpresa, olfato agudo, sensores eléctricos.</p>
+    <p><strong>Dato curioso:</strong> Cambia sus dientes constantemente. Puede vivir más de 70 años.</p>
+  </div>
+
+  
+  <div class="tab-content" id="pulpo">
+    <img src="https://c.files.bbci.co.uk/7E5E/production/_122305323_1920xgettyimages-1136409408.jpg" alt="Pulpo">
+    <h3>Pulpo</h3>
+    <p><strong>Hábitat:</strong> Fondos rocosos y cuevas en casi todos los océanos.</p>
+    <p><strong>Alimentación:</strong> Crustáceos, peces, moluscos.</p>
+    <p><strong>Técnicas de caza:</strong> Camuflaje, veneno, inteligencia para emboscar.</p>
+    <p><strong>Dato curioso:</strong> Tiene 3 corazones y puede escapar por agujeros diminutos.</p>
+  </div>
+
+  
+  <div class="tab-content" id="medusa">
+    <img src="https://fotografias.lasexta.com/clipping/cmsimages02/2016/07/04/6500E72D-EB76-48FE-9D71-C94C6BEC0798/98.jpg?crop=2459,1384,x0,y166&width=1900&height=1069&optimize=high&format=webply" alt="Medusa">
+    <h3>Medusa</h3>
+    <p><strong>Hábitat:</strong> Desde la superficie hasta zonas abisales.</p>
+    <p><strong>Alimentación:</strong> Zooplancton, peces pequeños, larvas.</p>
+    <p><strong>Técnicas de caza:</strong> Tentáculos venenosos que paralizan.</p>
+    <p><strong>Dato curioso:</strong> La Turritopsis dohrnii puede reiniciar su ciclo vital.</p>
+  </div>
+
+  
+  <div class="tab-content" id="ballena">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoNoLaH-tCge_bECJpKdtabbaEhxPX7PLd-4kJy8CSnypX83lf8izKD_IngmVkZdJv5DI&usqp=CAU" alt="Ballena">
+    <h3>Ballena Azul</h3>
+    <p><strong>Hábitat:</strong> Océanos de todo el mundo, migración entre zonas frías y cálidas.</p>
+    <p><strong>Alimentación:</strong> Krill (hasta 3 toneladas por día).</p>
+    <p><strong>Técnicas de caza:</strong> Traga miles de litros con krill y los filtra con barbas.</p>
+    <p><strong>Dato curioso:</strong> Su corazón pesa lo mismo que un auto pequeño.</p>
+  </div>
+
+  <a href="index.html" class="btn volver" style="margin: 30px auto; display: inline-block;"> Volver al inicio</a>
+</body>
+</html>
